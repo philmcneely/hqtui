@@ -87,24 +87,23 @@ export function SiteNav() {
 
 /**
  * @profullstack/footer: links, copyright and the webring, from the package's
- * @latest template (an async server component).
+ * @latest template (an async server component). The pit.world network footer
+ * follows it from the root layout.
  */
-export function SiteFooter({ views }: { views?: number }) {
+export function SiteFooter() {
   return (
     <div className="text-white">
       <Footer
         site="https://hqtui.com/"
-        tagline={views ? `MIT · ${views.toLocaleString()} views` : "MIT"}
+        tagline="MIT"
         links={[
-          { label: "Languages", href: "/#languages" },
+          { label: "Docs", href: "/docs" },
+          { label: "Cookbook", href: "/book" },
+          { label: "Apps", href: "/apps" },
+          { label: "Blog", href: "/blog" },
           { label: "Discussions", href: "https://bbs.hqtui.com" },
           { label: "GitHub", href: "https://github.com/profullstack/hqtui" },
           { label: "npm", href: "https://www.npmjs.com/package/@profullstack/hqtui" },
-          { label: "Docs", href: "/docs" },
-          { label: "Apps", href: "/apps" },
-          { label: "Cookbook", href: "/book" },
-          { label: "Blog", href: "/blog" },
-          { label: "PRD", href: "https://github.com/profullstack/hqtui/blob/main/docs/PRD.md" },
         ]}
       />
     </div>
